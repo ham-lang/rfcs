@@ -8,9 +8,6 @@ function normalizepath {
 repo_folder=$(normalizepath "$(dirname "${BASH_SOURCE[0]}")/../")
 
 # ========== PROMPT =============
-
-echo "Enter Proposal ID (my-feature): "
-read proposal_id
-
+read -p "Enter Proposal ID (my-feature): " proposal_id
 cp "${repo_folder}rfc-template.md" "${repo_folder}text/0000-${proposal_id}.md"
 echo "Created \"${repo_folder}text/0000-${proposal_id}.md\""
